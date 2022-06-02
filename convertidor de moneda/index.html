@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>conversor de moneda</title>
+    <script src="./practico2.js"></script>
+    <link rel="stylesheet" href="./formulario.css">
+</head>
+<body>
+    <br><br>
+    <h3>casa de la moneda</h3>
+    <div class="container">
+        <nav class="nav-main">
+            <ul class="nav-menu">
+                <li>
+                    <a href="./noticiass.html">noticias</a>
+                </li>
+                <li>
+                    <a href="#">contacto</a>
+                </li>
+                <li>
+                    <a href="./tabla.html">Tablas</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <form class="formulario">
+    <p>Ingrese moneda a enviar</p>
+    <input type="radio" name="cambio" id="uno">dolar
+    <input type="radio" name="cambio" id="dos">euro
+    <br><br>
+    <p>INGRESE MONTO</p>
+    <input type="number" id="valor" min="1" max="100000">
+    <input type="button" id="cotizador" value="cotizar" onclick="convertir()">
+    </form>
+
+</body>
+</html>
