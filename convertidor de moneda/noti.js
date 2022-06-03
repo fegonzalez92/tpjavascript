@@ -51,13 +51,11 @@ const retrocederImagen = () => {
 btnRetrocede.addEventListener('click', retrocederImagen);
 
 /*buscar imagen*/
-// Primero se declara la variable y despues se usan, no se usa y despues se crea
 var btnBuscar = document.getElementById("cotizador")
-// Colocate mal el nombre del input de texto
 btnBuscar.addEventListener('click',buscarImagenConBuscador);
 
 function buscarImagenConBuscador(){
-  // https://www.youtube.com/watch?v=523ul-u_aFQ
+  
   var buscadorTexto = document.getElementById("valor").value
   document.getElementById('busqueda').innerHTML = buscadorTexto
 
@@ -66,4 +64,11 @@ function buscarImagenConBuscador(){
       document.getElementById('resultadoBusqueda').src = element.src
     }
   });
+  while (listadoImagenes.hasChildNodes()) {
+    listadoImagenes.removeChild(listadoImagenes.firstChild);
+}
+//esto es para poder cargar las imagenes originales sino se encuentra la imagen
+if(filtradoImagenes.length === 1) {
+    filtradoImagenes = imagenes;
+}
 }
